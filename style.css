@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    height: 120px;
+    top: 0;
+    z-index: 1;
+    position: sticky;
+}
+
+header div#background_ancoras {
+    background-color: rgb(35, 217, 156);
+    width: 120px;
+    height: 120px;
+    margin-right: -20px;
+    margin-top: -20px;
+    border-radius: 120px;
+    transition: .5s ease-in-out;
+} 
+
+header div#background_ancoras:hover {
+    width: 50%;
+    height: 60%;
+    margin-right: .5%;
+    margin-top: .5%;
+    cursor:pointer;
+}
+
+header div#background_ancoras figure {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+header div#background_ancoras figure img {
+    width: 30px;
+}
