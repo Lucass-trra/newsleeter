@@ -3,6 +3,16 @@
     margin: 0;
     padding: 0;
 }
+/* animações para os elementos */
+@keyframes links {
+    50% {
+        transform: translateX(50%);    
+    }
+
+    50% {
+        transform: translateX(-20%);
+    }
+}
 
 header {
     display: flex;
@@ -22,6 +32,41 @@ header div#background_ancoras {
     border-radius: 120px;
     transition: .5s ease-in-out;
 } 
+
+header div#background_ancoras ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: .2s ease-in-out;
+}
+
+a:hover {
+    color:azure;
+    letter-spacing: 2px;
+
+}
+
+
+header div#background_ancoras ul li{
+    margin-left: 5%;
+    text-decoration: none;
+    list-style: none;
+    font-family: fantasy;
+    font-size: large;
+    font-weight: bolder;
+    transition: .5s ease-in-out;
+}
+
+header div#background_ancoras ul li:hover {
+    animation: links 1s ease-in-out;
+}
 
 header div#background_ancoras:hover {
     width: 50%;
