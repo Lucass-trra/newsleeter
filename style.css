@@ -1,9 +1,47 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    transition: .5s ease-in-out;
     padding: 0;
 }
-/* animações para os elementos */
+	
+:root {
+  --body-bg: #fafafa;
+  --body-color: #555;
+  --link-color: #222;
+  --link-color-hover: #fee1dd;
+  --figura_claro_escuro: url("./images/modo-noturno.png");
+  --invert-color:invert(100%);
+  --background_figura: black;
+}
+
+.dark-mode:root {
+  --body-bg: #212529;
+  --body-color: #899095;
+  --link-color: #dee2e6;
+  --link-color-hover: #ec5840;
+  --figura_claro_escuro: url("images/ideia.png");
+  --invert-color:invert(0%);
+  --background_figura: white;
+}
+ 
+body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
+}
+ 
+a {
+    text-decoration: none;
+    color: var(--link-color);
+   
+}
+
+a:hover {
+    letter-spacing: 2px;
+    color: var(--link-color-hover);
+}
+
+/* animações para os elementos de textos */
 @keyframes links {
     50% {
         transform: translateX(50%);    
@@ -16,7 +54,7 @@
 
 header {
     display: flex;
-    justify-content: end;
+    justify-content:space-between;
     height: 120px;
     top: 0;
     z-index: 1;
@@ -30,7 +68,6 @@ header div#background_ancoras {
     margin-right: -20px;
     margin-top: -20px;
     border-radius: 120px;
-    transition: .5s ease-in-out;
 } 
 
 header div#background_ancoras ul {
@@ -41,19 +78,6 @@ header div#background_ancoras ul {
     transform: translateY(-50%);
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    transition: .2s ease-in-out;
-}
-
-a:hover {
-    color:azure;
-    letter-spacing: 2px;
-
-}
-
-
 header div#background_ancoras ul li{
     margin-left: 5%;
     text-decoration: none;
@@ -61,7 +85,7 @@ header div#background_ancoras ul li{
     font-family: fantasy;
     font-size: large;
     font-weight: bolder;
-    transition: .5s ease-in-out;
+   
 }
 
 header div#background_ancoras ul li:hover {
@@ -76,7 +100,7 @@ header div#background_ancoras:hover {
     cursor:pointer;
 }
 
-header div#background_ancoras figure {
+header div#background_ancoras figure#figura_menu_conteiner {
     display: flex;
     justify-content: center;
     position: relative;
@@ -84,6 +108,34 @@ header div#background_ancoras figure {
     transform: translatey(-50%);
 }
 
-header div#background_ancoras figure img {
+header div#background_ancoras figure#figura_menu_conteiner img {
     width: 30px;
 }
+
+header figure#modo_claro_escuro {
+    width: 75px;
+    height: 75px;
+    margin-left: -13px;
+    margin-top: -15px;
+    border-radius: 75px;
+    background-color:black;
+    cursor: pointer;
+    background-color: var(--background_figura);
+}  
+
+header figure#modo_claro_escuro:hover {
+    width: 6.5%;
+    height:90px;
+}
+ 
+header figure#modo_claro_escuro img {
+    width: 50%;
+    position: relative;
+    top: 50%;
+    margin-left: 25%;
+    transform: translateY(-50%);
+    filter: var(--invert-color);
+}
+
+
+
