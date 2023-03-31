@@ -4,11 +4,15 @@
     transition: .5s ease-in-out;
     padding: 0;
 }
+
+
 	
 :root {
   --body-bg: #fafafa;
+  --ancorar:#fafafa;
   --body-color: #555;
   --link-color: #222;
+  --color-principal:rgb(28, 179, 129);
   --link-color-hover: #fee1dd;
   --figura_claro_escuro: url("./images/modo-noturno.png");
   --invert-color:invert(100%);
@@ -17,9 +21,11 @@
 
 .dark-mode:root {
   --body-bg: #212529;
+  --ancorar:#212529;
   --body-color: #899095;
   --link-color: #dee2e6;
-  --link-color-hover: #ec5840;
+  --color-principal:#ec5840;
+  --link-color-hover: #110d12;
   --figura_claro_escuro: url("images/ideia.png");
   --invert-color:invert(0%);
   --background_figura: white;
@@ -28,6 +34,10 @@
 body {
   background-color: var(--body-bg);
   color: var(--body-color);
+}
+
+hr {
+    border: var(--ancorar);
 }
  
 a {
@@ -62,7 +72,7 @@ header {
 }
 
 header div#background_ancoras {
-    background-color: rgb(35, 217, 156);
+    background-color: var(--color-principal);
     width: 120px;
     height: 120px;
     margin-right: -20px;
@@ -135,6 +145,45 @@ header figure#modo_claro_escuro img {
     margin-left: 25%;
     transform: translateY(-50%);
     filter: var(--invert-color);
+}
+
+main section#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section#sobre div#conteiner_titulo {
+    width: 75%;
+    margin-bottom: 2%;
+}
+
+main section#sobre div#conteiner_titulo h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight:bolder;
+    font-family:Alkatra;
+    color: var(--color-principal);
+    
+}
+
+main section#sobre div#conteiner_descricao {
+    width: 75%;
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-principal) var(--body-bg) ;
+    
+    
+}
+
+main section#sobre div#conteiner_descricao p {
+    font-family: Noto Sans Avestan;
+    font-weight:600;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    
+    
 }
 
 
