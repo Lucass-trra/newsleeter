@@ -5,8 +5,6 @@
     padding: 0;
 }
 
-
-	
 :root {
   --body-bg: #fafafa;
   --ancorar:#fafafa;
@@ -66,6 +64,7 @@ header {
     display: flex;
     justify-content:space-between;
     height: 120px;
+    margin-bottom: 3%;
     top: 0;
     z-index: 1;
     position: sticky;
@@ -73,11 +72,11 @@ header {
 
 header div#background_ancoras {
     background-color: var(--color-principal);
-    width: 120px;
-    height: 120px;
-    margin-right: -20px;
-    margin-top: -20px;
-    border-radius: 120px;
+    width: 75px;
+    height: 75px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 75px;
 } 
 
 header div#background_ancoras ul {
@@ -94,12 +93,11 @@ header div#background_ancoras ul li{
     list-style: none;
     font-family: fantasy;
     font-size: large;
-    font-weight: bolder;
-   
+
 }
 
 header div#background_ancoras ul li:hover {
-    animation: links 1s ease-in-out;
+    animation: links .5s ease-in-out;
 }
 
 header div#background_ancoras:hover {
@@ -119,14 +117,14 @@ header div#background_ancoras figure#figura_menu_conteiner {
 }
 
 header div#background_ancoras figure#figura_menu_conteiner img {
-    width: 30px;
+    width: 20px;
 }
 
 header figure#modo_claro_escuro {
     width: 75px;
     height: 75px;
-    margin-left: -13px;
-    margin-top: -15px;
+    margin-left: 5px;
+    margin-top: 5px;
     border-radius: 75px;
     background-color:black;
     cursor: pointer;
@@ -134,8 +132,8 @@ header figure#modo_claro_escuro {
 }  
 
 header figure#modo_claro_escuro:hover {
-    width: 6.5%;
-    height:90px;
+    width: 6%;
+    height:80px;
 }
  
 header figure#modo_claro_escuro img {
@@ -147,6 +145,7 @@ header figure#modo_claro_escuro img {
     filter: var(--invert-color);
 }
 
+/* desenvolvendo seção sobre */
 main section#sobre {
     display: flex;
     flex-direction: column;
@@ -154,7 +153,8 @@ main section#sobre {
 }
 
 main section#sobre div#conteiner_titulo {
-    width: 75%;
+    width: 97%;
+    
     margin-bottom: 2%;
 }
 
@@ -164,26 +164,64 @@ main section#sobre div#conteiner_titulo h1 {
     font-weight:bolder;
     font-family:Alkatra;
     color: var(--color-principal);
-    
 }
 
 main section#sobre div#conteiner_descricao {
-    width: 75%;
-    height: 200px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-principal) var(--body-bg) ;
-    
-    
+    display: flex;
+    justify-content: center;
 }
 
-main section#sobre div#conteiner_descricao p {
+main section#sobre div#conteiner_descricao figure#conteiner_figura1{
+    display: flex;
+    width: 60%;
+    height: 500px;
+
+}
+main section#sobre div#conteiner_descricao figure#conteiner_figura1 img{
+    width: 100%;
+}
+
+main section#sobre div#conteiner_descricao div#subConteiner_descricao {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 3%;
+    margin-left: -12%;
+    height: 300px;
+}
+
+main section#sobre div#conteiner_descricao div#subConteiner_descricao h2#subTitulo_Sobre {
+    color: var(--color-principal);
+    font-style: italic;
+    font-family: fantasy;
+    font-weight: 200;
+    font-size: 40px;
+    margin-bottom: 5%;
+} 
+
+main section#sobre div#conteiner_descricao div#subConteiner_descricao div#texto {
+    overflow-y: scroll;
+}
+
+
+main section#sobre div#conteiner_descricao div#subConteiner_descricao div#texto::-webkit-scrollbar {
+    width: 7px;
+}
+
+main section#sobre div#conteiner_descricao div#subConteiner_descricao div#texto::-webkit-scrollbar-track {
+    background-color: var(--body-bg);
+}
+
+main section#sobre div#conteiner_descricao div#subConteiner_descricao div#texto::-webkit-scrollbar-thumb {
+    background-color: var(--color-principal);
+    border-radius: 10px;
+}
+
+main section#sobre div#conteiner_descricao div#subConteiner_descricao div#texto p {
     font-family: Noto Sans Avestan;
     font-weight:600;
     letter-spacing: 1px;
     word-spacing: 5px;
-    
-    
 }
 
 
