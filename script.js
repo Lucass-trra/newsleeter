@@ -6,6 +6,8 @@
     const html = document.querySelector("html")
     var modo_claro_escuro = document.getElementById("modo_claro_escuro");
     var figura_claro_escuro = document.getElementById("figura_claro_escuro");
+//inputs do cadastro para newsletter 
+    var inputsCadastro = document.getElementsByClassName("class_form");
     
 
 // configrando o menu das âncoras
@@ -29,6 +31,41 @@
         html.classList.toggle("dark-mode");
     })
 
-    
+
+    for (let index = 0; index < inputsCadastro.length; index++) {
+        inputsCadastro[index].addEventListener("click",() => {
+            inputsCadastro[index].setAttribute("style","width:75%; border-bottom: 3px solid var(--color-principal);");
+
+                switch (index) {
+                    case 0:
+                        inputsCadastro[1].removeAttribute("style");
+                        inputsCadastro[2].removeAttribute("style");
+                    break;
+
+                    case 1:
+                        inputsCadastro[0].removeAttribute("style");
+                        inputsCadastro[2].removeAttribute("style");
+                    break;
+                    
+                    case 2:
+                        inputsCadastro[1].removeAttribute("style");
+                        inputsCadastro[3].removeAttribute("style");
+                    break;
+                
+                    default:
+                        break;
+                }
+        })
+
+
+
         
+    }
+        
+   
+
+       
+    
+    
+ 
         

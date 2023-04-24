@@ -20,7 +20,7 @@
 .dark-mode:root {
   --body-bg: #212529;
   --ancorar:#212529;
-  --body-color: #899095;
+  --body-color: #dfdfdf;
   --link-color: #dee2e6;
   --color-principal:#ec5840;
   --link-color-hover: #110d12;
@@ -224,5 +224,76 @@ main section#sobre div#conteiner_descricao div#subConteiner_descricao div#texto 
     word-spacing: 5px;
 }
 
+section#cadastro {
+    display: flex;
+    margin-top: 10%;
+    justify-content:center;
+}
+
+section#cadastro form#formulario {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    box-shadow:2px 2px 20px 5px #212529 ;
+}
+
+section#cadastro form#formulario fieldset#conteiner_cadastro {
+    display: flex;
+    height: 100%;
+    border: transparent;
+    width: 70%;
+    margin-left: 2%;
+    flex-direction: column;
+}
+
+section#cadastro form#formulario fieldset#conteiner_cadastro legend {
+    font-size: 40px;
+    font-family: fantasy;
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+section#cadastro form#formulario fieldset#conteiner_cadastro input.class_form {
+    width: 1%;
+    border: transparent ;
+    border-bottom: 5px solid var(--color-principal);
+    transition: .5s ease-in-out;
+    background-color: var(--body-bg);
+    padding: 2%;
+    margin-left: 4%;
+}
+
+section#cadastro form#formulario fieldset#conteiner_cadastro input.class_form:focus {
+    outline: none;
+}
+
+section#cadastro form#formulario fieldset#conteiner_cadastro label.class_form_label {
+    font-size: 22px;
+    margin-top: 10%;
+    margin-left: 4%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+
+section#cadastro form#formulario fieldset#conteiner_cadastro button {
+    width: 100%;
+    padding: 3%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: large;
+    border: 1.4px solid var(--color-principal);
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+section#cadastro form#formulario fieldset#conteiner_cadastro 
+button:hover{
+    box-shadow: 
+    inset -12em 0 0 0 var(--color-principal),
+    inset 12em 0 0 0 var(--color-principal);  
+}
 
 
