@@ -13,7 +13,7 @@
   --color-principal:rgb(28, 179, 129);
   --link-color-hover: #fee1dd;
   --figura_claro_escuro: url("./images/modo-noturno.png");
-  --invert-color:invert(100%);
+  --invert-color:invert(-100%);
   --background_figura: black;
 }
 
@@ -25,7 +25,7 @@
   --color-principal:#ec5840;
   --link-color-hover: #110d12;
   --figura_claro_escuro: url("images/ideia.png");
-  --invert-color:invert(0%);
+  --invert-color:invert(100%);
   --background_figura: white;
 }
  
@@ -223,16 +223,33 @@ main section#sobre div#conteiner_descricao div#subConteiner_descricao div#texto 
     letter-spacing: 1px;
     word-spacing: 5px;
 }
-
+/* desenvolvendo a seção de Cadastro */
 section#cadastro {
     display: flex;
     margin-top: 10%;
-    justify-content:center;
+    margin-right: 1%;
+    justify-content:flex-end;
+}
+
+section#cadastro figure#Conteiner_Figura2 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items:flex-end;
+}
+
+section#cadastro figure#Conteiner_Figura2 img {
+    width: 60%;
+    top: 50%;
+    filter: var(--invert-color);
+    position: relative;
+    transform: translateY(-50%);
 }
 
 section#cadastro form#formulario {
     display: flex;
     justify-content: center;
+    background-color: var(--body-bg);
     width: 40%;
     box-shadow:2px 2px 20px 5px #212529 ;
 }
@@ -255,7 +272,9 @@ section#cadastro form#formulario fieldset#conteiner_cadastro legend {
 
 section#cadastro form#formulario fieldset#conteiner_cadastro input.class_form {
     width: 1%;
-    border: transparent ;
+    border: transparent;
+    color: var(--body-color);
+    font-size: x-large;
     border-bottom: 5px solid var(--color-principal);
     transition: .5s ease-in-out;
     background-color: var(--body-bg);
@@ -295,5 +314,24 @@ button:hover{
     inset -12em 0 0 0 var(--color-principal),
     inset 12em 0 0 0 var(--color-principal);  
 }
+
+/* classes adicionadas no JavaScript */
+.figura_verificacao {
+    width: 50%;
+    height: 50%;
+    filter: var(--invert-color);
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);    
+}
+
+.conteiner_Confirmacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family:Harmattan;
+}
+
 
 

@@ -63,33 +63,30 @@
         </section>
 
         <section id="cadastro">
-            <figure>
-                <img src="https://picsum.photos/id/1025/400/400" alt="">
+            <figure id="Conteiner_Figura2">
+                <img id="figuraCadastro" src="./images/robo-unscreen.gif" alt="animação de um robô para seçãod de cadastro">
             </figure>
 
             <form id="formulario" action="">
                 <fieldset id="conteiner_cadastro">
-
                     <legend>cadastro</legend>
                         <label for="Inome" class="class_form_label">Nome</label>
-                            <input type="text" name="nome" id="Inome" class="class_form">
+                            <input type="text" name="nome" id="Inome" class="class_form" required>
 
                         <label for="Isobrenome" class="class_form_label">Sobrenome</label>
-                            <input type="text" name="Nsobrenome" id="Isobrenome" class="class_form">
+                            <input type="text" name="Nsobrenome" id="Isobrenome" class="class_form" required>
 
                         <label for="Iemail" class="class_form_label">Email</label>
-                            <input type="email" name="Nemail" id="Iemail" class="class_form">
+                            <input type="email" name="Nemail" id="Iemail" class="class_form" required>
 
-                        <button type="submit" onclick="enviarDados_Email()">Enviar</button>   
+                        <button id="Enviar_Dados" type="menu" onclick="tela_Agradecimento()">Enviar</button>   
                 </fieldset>
-
-                
             </form>
         </section>
     </main>
 
     <footer></footer>
     
-    <script src="script.js"></script>
+    <script src="style.js"></script>
 </body>
 </html>
